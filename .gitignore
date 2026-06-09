@@ -1,0 +1,28 @@
+# Dependencies (host-internal @cinatra-ai/* peers resolve only in the cinatra
+# monorepo; any local install here is throwaway)
+node_modules/
+
+# Lockfiles are not committed by design — CI installs with --no-frozen-lockfile
+pnpm-lock.yaml
+package-lock.json
+
+# Build output (tsconfig outDir)
+dist/
+
+# Test coverage
+coverage/
+
+# `npm pack` tarballs (CI only ever runs --dry-run)
+*.tgz
+
+# Local environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
