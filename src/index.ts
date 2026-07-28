@@ -16,7 +16,20 @@ export const contractArtifactManifest: SemanticArtifactManifest = {
     },
   },
   skills: {
-    matchers: ["@cinatra-ai/contract-artifact:contract-matcher"],
+    matchers: ["@cinatra-ai/contract-matcher-skill:contract-matcher"],
   },
   matcherConfidenceThreshold: 0.7,
+  objectTypes: [
+    {
+      type: "@cinatra-ai/contract-artifact:contract",
+      claim: "dedicated",
+      dispositions: {
+        projection: "artifact-safe",
+        sensitivity: "sensitive",
+      },
+      schema: {
+        type: "object",
+      },
+    },
+  ],
 };
